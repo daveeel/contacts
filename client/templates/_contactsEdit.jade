@@ -1,0 +1,9 @@
+template(name="_contactsEdit")
+  +ionModal customTemplate=true
+    +autoForm collection="Contacts" doc=contact id="contacts-edit-form" type="update"
+      .bar.bar-header.bar-stable
+        button.button.button-clear(data-dismiss="modal" type="button") Cancel
+        h2.title Edit Contact
+        button.button.button-positive.button-clear(type="submit") Save
+      .content.has-header.overflow-scroll
+        +afQuickFields omitFields="avatarUrl"

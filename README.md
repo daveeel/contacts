@@ -1,6 +1,6 @@
 ![](http://f.cl.ly/items/391y4708420P0H001k1G/meteoric.png)
 
-# Meteoric Contacts App
+# Meteoric Contacts App ( Jade / LiveScript Reference )
 
 This is a demonstration app of the various [Meteoric](https://github.com/meteoric) packages:
 

@@ -1,0 +1,37 @@
+template(name='contactsShow')
+  +contentFor 'headerButtonLeft'
+    +ionNavBackButton path='contacts' text='Contacts'
+    
+  +contentFor 'headerTitle'
+    h1.title Details
+    
+  +contentFor 'headerButtonRight'
+    button.button.button-clear(data-ion-modal='_contactsEdit' data-id='{{contact._id}}')
+      | Edit
+      
+  +ionView
+    +ionContent class='padding contact-detail'
+      with contact
+        .list.card
+        
+          .item.item-avatar
+            img(src='{{avatarUrl}}')
+            h2 {{name.first}} {{name.last}}
+            p {{location.city}}, {{location.state}}
+            
+          .item.item-body
+            {{{activeLabel}}}
+            
+            h4 Notes
+            p {{details.notes}}
+            
+          .item.tabs.tabs-secondary.tabs-icon-left
+            a.tab-item(href='#' data-action='fake')
+              i.icon.ion-email
+              | Send Email
+            a.tab-item(href='#' data-action='fake')  
+              i.icon.ion-iphone
+              | Call
+            a.tab-item(href='#' data-action='fake')  
+              i.icon.ion-share
+              | Share

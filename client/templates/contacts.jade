@@ -1,0 +1,16 @@
+template(name="contacts")
+  +contentFor 'headerTitle'
+    h1.title Contacts
+    
+  +contentFor 'headerButtonRight'
+    button.button.button-clear(data-ion-modal="_contactsNew")
+      +ionIcon icon='ios-plus-empty'
+      
+  +ionView
+    +ionContent
+      +ionList
+        each contacts
+          +ionItem path='contacts.show' buttonRight=true avatar=true class='item-icon-right'
+            img(src="{{avatarUrl}}")
+            | {{name.first}} {{name.last}}
+            +ionIcon icon='ios-arrow-forward' class='positive'
